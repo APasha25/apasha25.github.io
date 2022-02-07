@@ -1,0 +1,54 @@
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<body>
+<img src="Pasha.png" width="100%" height="40%">
+
+<div class="w3-bar w3-green">
+ <button class="w3-bar-item w3-button" onclick="openSepatu('Nike')">Nike</button>
+ <button class="w3-bar-item w3-button" onclick="openSepatu('Adidas')">Adidas</button>
+ <button class="w3-bar-item w3-button" onclick="openSepatu('Specs')">Specs</button>
+ <button class="w3-bar-item w3-button" onclick="openSepatu('Puma')">puma</button>
+</div>
+
+<div id="Home" class="w3-container Sepatu" style="">
+<center>
+ <h2>Selamat Datang</h2><hr>
+ <p>APasha Shoes Store</p>
+ <p><img src="store.jpg" width="85%" height="50%"></p>
+</div>
+
+<div id="Nike" class="w3-container Sepatu" style="display:none">
+<center>
+ <h2>Nike Mercurial Vapor</h2><hr>
+ <p><img src="nike.jpg" width="30%" height="50%"></p>
+</div>
+<div id="Adidas" class="w3-container Sepatu" style="display:none">
+<center>
+ <h2>Adidas Nemeziz</h2><hr>
+ <p><img src="adidas.jpg" width="30%" height="50%"></p>
+</div>
+
+<div id="Specs" class="w3-container Sepatu" style="display:none">
+<center>
+ <h2>Specs Accelerator</h2><hr>
+ <p><p><img src="specs.jpg" width="30%" height="50%"></p></p>
+</div>
+<div id="Puma" class="w3-container Sepatu" style="display:none">
+<center>
+ <h2>Puma Future</h2><hr>
+ <p><img src="puma.jpg" width="30%" height="50%"></p>
+</div>
+<script>
+function openSepatu(namaKota) {
+ var i;
+ var x = document.getElementsByClassName("Sepatu");
+ for (i = 0; i < x.length; i++) {
+ x[i].style.display = "none"; 
+ }
+ document.getElementById(namaKota).style.display = "block"; 
+}
+</script>
+</body>
+</html>
